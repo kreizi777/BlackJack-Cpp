@@ -1,32 +1,38 @@
 # BlackJack-Cpp
-Prosty projekt gry Blackjack napisanej w języku C++, działającej w konsoli.
 
-🎴 Blackjack C++ Console Game
+🎰 BlackJack C++
 
-Prosty projekt gry Blackjack napisanej w języku C++, działającej w konsoli.
-Gracz może obstawiać pieniądze, dobierać karty, sprawdzać saldo i grać dowolną liczbę rund.
-Gra została stworzona jako projekt edukacyjny — idealna do nauki podstaw logiki, funkcji i losowości w C++.
+Prosty, konsolowy BlackJack napisany w języku C++, który pozwala zagrać w klasyczną wersję kasynowej gry karcianej.
+Projekt zawiera menu główne, zapis salda, historię gier oraz obsługę podstawowych zasad BlackJacka.
 
 ⸻
 
-🕹️ Funkcje gry
-
-✅ Losowe rozdanie kart (z pełną talią 13 wartości)
-✅ Obsługa salda i stawek gracza
-✅ Dobieranie kart (hit/stand)
-✅ Automatyczna gra krupiera (dobiera do 17)
-✅ Obsługa asa jako 1 lub 11
-✅ Powtarzanie rund bez restartu gry
-✅ Prosty system wygranych, przegranych i remisów
-✅ Komunikaty w języku polskim
+🧩 Funkcje
+	•	🎮 Tryb gry BlackJack — gracz gra przeciwko krupierowi zgodnie z zasadami klasycznej gry.
+	•	💾 Zapis i wczytywanie salda — saldo z ostatniej sesji zapisywane jest w pliku saldo.txt.
+	•	📊 Historia rozgrywek — wszystkie wyniki i statystyki zapisywane są w pliku statystyki.txt.
+	•	🧠 System menu — gracz może rozpocząć nową grę, sprawdzić statystyki lub wyjść.
+	•	🃏 Dynamiczne dobieranie kart — system losowania i obliczania sum punktów z uwzględnieniem Asa (1 lub 11).
 
 ⸻
 
-💻 Technologie
-	•	Język: C++
-	•	Standard: C++11+
-	•	Środowisko: dowolny kompilator (G++, MSVC, CLion, Code::Blocks itp.)
-  
+
+🧮 Zasady gry
+	•	Celem gry jest uzyskanie sumy kart jak najbliższej 21 punktów (bez przekroczenia).
+	•	Figury (J, Q, K) mają wartość 10.
+	•	As może mieć wartość 1 lub 11, w zależności od sytuacji.
+	•	Jeśli suma kart gracza przekroczy 21 → przegrywa automatycznie.
+	•	Krupier dobiera karty, dopóki nie uzyska co najmniej 17 punktów.
+
+⸻
+
+🧠 Technologie
+	•	C++17
+	•	Operacje na plikach (fstream)
+	•	Klasy i metody obiektowe
+	•	Losowanie kart (rand(), srand())
+	•	Obsługa menu i prosty system stanu gry
+
 ⸻
 
 ⚙️ Uruchomienie
@@ -38,23 +44,12 @@ cd blackjack-cpp
   g++ main.cpp -o blackjack
   4. Uruchom: 
   ./blackjack
+  
+  ⸻
 
-  🧩 Struktura kodu
+✍️ Autor
 
-Plik główny: main.cpp
-Zawiera funkcje:
-	•	rozdaj() – rozpoczęcie rundy
-	•	wartoscKarty() – ustalanie wartości karty
-	•	nazwaKarty() – zwraca nazwę karty
-	•	sprawdzWynik() – logika gry i sprawdzanie zwycięzcy
-	•	sprawdzSaldo() – obsługa salda i kontynuacji gry
+Projekt stworzony w celach edukacyjnych – rozwój umiejętności programowania w C++
+💡 Autor: [kreizi]
 
-⸻
 
-📈 Pomysły na rozwój
-	•	🃏 Wprowadzenie klas (class BlackjackGame)
-	•	💾 Zapis i wczytywanie stanu gry (saldo, statystyki)
-	•	🧠 Ulepszone AI krupiera (soft 17, strategie)
-	•	🎨 Kolory i efekty konsolowe
-	•	🎮 Tryb dla 2 graczy
-	•	🪄 Interfejs graficzny (SFML / SDL)
