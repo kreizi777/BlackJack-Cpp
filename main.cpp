@@ -82,6 +82,8 @@ private:
         srand(time(0));
     }
 
+
+
     void BlackJack::menu() {
         int wybor;
         do{
@@ -184,7 +186,7 @@ private:
     }
     double BlackJack::wczytajSaldo() {
         ifstream plik("saldo.txt");
-        double saldo = 0; 
+        double saldo = 0;
         if (plik.is_open()) {
             plik >> saldo;
             plik.close();
