@@ -15,8 +15,8 @@ class Karta {
 
     public:
         Karta(int n);
-    int getWartosc() const;
-    string getNazwa() const;
+        int getWartosc() const;
+        string getNazwa() const;
 
 };
 
@@ -125,7 +125,7 @@ private:
             // PETLA DZIEKI KTOREJ GRA SIE NIE KONCZY PO 1 RUNDZIE
         }
         do {
-            
+
             opcja = ' ';
             int karta1 = rand() % 13 + 1;
             int karta2 = rand() % 13 + 1;
@@ -184,7 +184,7 @@ private:
     }
     double BlackJack::wczytajSaldo() {
         ifstream plik("saldo.txt");
-        double saldo = 100; // domyślne saldo
+        double saldo = 0; 
         if (plik.is_open()) {
             plik >> saldo;
             plik.close();
