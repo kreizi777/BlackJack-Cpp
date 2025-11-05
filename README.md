@@ -47,6 +47,8 @@ cd blackjack-cpp
   
   ⸻
 
+  W trakcie - tworzenie profilu.
+
 ✍️ Autor
 
 Projekt stworzony w celach edukacyjnych – rozwój umiejętności programowania w C++
