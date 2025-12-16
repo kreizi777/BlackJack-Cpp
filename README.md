@@ -1,116 +1,68 @@
-♠️ BlackJack C++
-Prosta, konsolowa implementacja klasycznej gry karcianej Blackjack (Oczko) napisana w języku C++. Projekt wykorzystuje programowanie obiektowe (OOP), system zapisu stanu gry do plików oraz zaawansowane generowanie liczb losowych.
+🃏 BlackJack C++ – Gra Karciana 🎲
+Cześć! 👋 Oto moja wersja klasycznego Blackjacka (Oczka) napisanego w C++. Projekt powstał, żeby poćwiczyć programowanie obiektowe, ale przede wszystkim – żeby można było pograć w karty w konsoli! 🖥️
 
-Autor: Kacper Wesołowski
+Autor: Kacper Wesołowski 👨‍💻
 
-📋 Spis treści
-O projekcie
+🧐 O co chodzi?
+Symulujemy tutaj wizytę w kasynie 🎰. Grasz przeciwko Krupierowi (komputerowi). Masz swoje wirtualne pieniądze, obstawiasz zakłady i próbujesz ograć system.
 
-Funkcjonalności
+Gra jest sprytna – zapamiętuje Twój stan konta, więc jak zbankrutujesz, to musisz "wpłacić" nowe środki! 💸
 
-Technologie
+🌟 Co potrafi ta gra?
+👤 Twój Profil: Gra pamięta Twoje imię (login).
 
-Instalacja i Uruchomienie
+💰 Portfel: Stan konta zapisuje się w pliku – nie tracisz kasy po wyłączeniu gry.
 
-Zasady Gry
+🧠 Mądry Krupier: Komputer gra według prawdziwych zasad kasynowych (dobiera karty do 17 punktów).
 
-Struktura Plików
+🃏 Sprytne Asy: As liczy się jako 11 albo 1, żebyś nie przegrał za szybko.
 
-📖 O projekcie
-Celem projektu jest symulacja rozgrywki w Blackjacka z krupierem (komputerem). Gra odbywa się w terminalu i oferuje pełną logikę gry, w tym system zakładów pieniężnych oraz zapisywanie postępów gracza.
+📜 Historia: Wszystkie Twoje wyniki (wygrane i wtopy) lądują w pliku statystyki.txt.
 
-Projekt został stworzony z myślą o ćwiczeniu:
+🛠️ W czym to napisane?
+🔵 Język: C++
 
-Programowania obiektowego (Klasy Karta, Talia, BlackJack).
+📚 Biblioteki: Standardowe (nie musisz nic doinstalowywać!). Użyłem vector do trzymania kart i fstream do zapisywania wyników.
 
-Obsługi strumieni wejścia/wyjścia (zapis do plików .txt).
+🚀 Jak odpalić grę?
+Masz kompilator C++? To jedziemy! 🏎️
 
-Użycia kontenerów STL (vector).
-
-Generowania losowości (std::random, mt19937).
-
-✨ Funkcjonalności
-System Profilu i Salda: Gra zapamiętuje nazwę użytkownika oraz stan konta pomiędzy uruchomieniami.
-
-Logika Krupiera: Komputer dobiera karty zgodnie z zasadami kasynowymi (dobiera do 17 punktów).
-
-Inteligentne Asy: Wartość Asa (1 lub 11) zmienia się dynamicznie, aby gracz nie przekroczył 21 punktów.
-
-System Zakładów: Możliwość obstawiania wirtualnych pieniędzy. W przypadku wygranej (Blackjack) stawka mnożona jest x2.5.
-
-Historia Gier: Każda rozgrywka jest logowana w pliku statystyki.txt z datą, wynikiem i stanem punktowym.
-
-Walidacja Danych: Zabezpieczenie przed wprowadzaniem błędnych danych (np. liter zamiast liczb).
-
-🛠 Technologie
-Język: C++ (Standard C++11 lub nowszy)
-
-Biblioteki: iostream, vector, fstream, random, ctime, algorithm
-
-🚀 Instalacja i Uruchomienie
-Aby uruchomić grę, potrzebujesz kompilatora C++ (np. g++, clang lub MSVC).
-
-Sklonuj repozytorium:
+Pobierz kod:
 
 Bash
 
 git clone https://github.com/twoj-nick/blackjack-cpp.git
-cd blackjack-cpp
-Skompiluj kod:
+Skompiluj:
 
 Bash
 
 g++ main.cpp -o blackjack
-Uruchom grę:
+Graj!
 
-Windows:
+Windows: blackjack.exe
 
-DOS
+Linux/Mac: ./blackjack
 
-blackjack.exe
-Linux/macOS:
+🎯 Zasady (Szybki poradnik)
+Twoim celem jest mieć 21 punktów (lub mniej), ale więcej niż Krupier.
 
-Bash
+Dostajesz 2 karty. Krupier też, ale jedną ukrywa 🙈.
 
-./blackjack
-🎲 Zasady Gry w tej wersji
-Celem jest uzyskanie sumy punktów bliższej 21 niż krupier, ale nie przekraczając tej liczby.
+Decydujesz:
 
-Punktacja kart:
+[H]it (Dobierz) ➕ – bierzesz kolejną kartę.
 
-Karty 2-10: wartość nominalna.
+[S]tand (Pas) ✋ – zostajesz z tym, co masz.
 
-Figury (Walet, Dama, Król): 10 punktów.
+⚠️ Uważaj! Jak przekroczysz 21 punktów – PRZEGRYWASZ (Fura).
 
-As: 1 lub 11 punktów (korzystniej dla gracza).
+Jeśli wygrasz, zgarniasz kasę (2x stawka). Jak trafisz Blackjacka (21 w dwóch kartach), dostajesz bonus! 🤑
 
-Przebieg:
+📂 Co robią te pliki?
+Gra tworzy sobie kilka plików tekstowych, żeby pamiętać, co się działo:
 
-Gracz otrzymuje 2 odkryte karty.
+profil.txt 👤 – tu siedzi Twój nick.
 
-Krupier otrzymuje 1 odkrytą i 1 zakrytą kartę.
+saldo.txt 💳 – tu zapisana jest Twoja aktualna kasa.
 
-Gracz decyduje: [H]it (dobierz) lub [S]tand (pas).
-
-Jeśli gracz przekroczy 21, przegrywa stawkę.
-
-Jeśli gracz spasuje, krupier odkrywa karty i dobiera, aż uzyska minimum 17 punktów.
-
-Wypłaty:
-
-Wygrana: 2x stawka.
-
-Blackjack (21 w dwóch pierwszych kartach): 2.5x stawka.
-
-Remis: zwrot stawki.
-
-📂 Struktura Plików
-Gra automatycznie generuje pliki tekstowe służące do zapisu danych (persistence):
-
-main.cpp - Główny kod źródłowy gry.
-
-profil.txt - Przechowuje nazwę (login) ostatniego gracza.
-
-saldo.txt - Przechowuje aktualny stan konta gracza.
-
-statystyki.txt - Logi z historią rozegranych partii (data, wynik, punkty).
+statystyki.txt 📝 – tu jest cała historia Twoich gier (data, ile wygrałeś, jaki był wynik).
